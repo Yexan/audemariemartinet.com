@@ -2,23 +2,29 @@
 <html lang="fr" itemscope itemtype="http://schema.org/WebPage">
 <head>
   @@include('./partials/head.tpl.html', {
-      "meta_title": "YOUR-TITLE",
-      "meta_desc": "YOUR-DESCRIPTION"
-  })
+  "meta_title": "Aude-Marie Martinet",
+  "meta_desc": "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes âgées. Consultations à domicile"
+})
 </head>
-<body id="404">
+<body role="document">
 
-  <!-- PLACE YOUR CONTENT HERE -->
-  
-  <section>
+  <section id="main-pannel" role="main">
 
-    <h1>404</h1>
-    <p>Page not found</p>
-    
+    <div id="fourOfour">
+
+      <div class="cell">
+
+        <h2>404</h2>
+
+        <p class="info-box">
+          Page non trouvée
+        </p>
+        <a href="index.html" class="btn material">merci de retourner au site</a>
+
+      </div>
+
+    </div>
   </section>
 
-  @@include('./partials/footer.tpl.html')
-
-  <script src="js/main.js"></script>
 </body>
 </html>
