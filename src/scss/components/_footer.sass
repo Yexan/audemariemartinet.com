@@ -1,0 +1,47 @@
+@import ../mixins/utilities
+
+.footer
+  padding: 25px 0
+  background-color: #f8faf7
+  box-shadow: 0 -2px 2px 0 rgba(#cfe1e6, .3)
+
+
+.footer--wrapper
+  +wrapper
+  +flex-row-top
+
+  @media (max-width: 850px)
+    +flex-column-center
+
+
+.footer--identity,
+.footer--infos
+  width: 50%
+  padding: 15px
+
+  @media (max-width: 850px)
+    width: 100%
+    max-width: 420px
+
+
+.footer--title
+  font-size: 16px
+  font-weight: 700
+
+  @media (max-width: 430px)
+    margin-bottom: 10px
+    font-size: 14px
+
+.footer--info
+  +flex-row-left
+  margin: 16px 0
+  +color-and-hover(#444)
+
+  @media (max-width: 430px)
+    margin: 5px 0
+
+  i
+    font-size: 22px
+    margin-right: 10px
+
+

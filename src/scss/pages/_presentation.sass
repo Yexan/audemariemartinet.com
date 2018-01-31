@@ -1,0 +1,60 @@
+@import ../mixins/utilities
+@import ../mixins/tabs
+
+
+.presentation--tabs
+  +tabs
+
+
+.presentation--tab
+  +tab
+
+
+.presentation--tabs-content
+
+
+.presentation--tab-content
+  display: none
+
+  &.active
+    +flex-row-center
+    flex-wrap: wrap
+
+    &[target-content="approche"]
+      +flex-column-top-left
+
+
+.presentation--experience--infos,
+.presentation--experience--diplomes,
+.presentation--experience--lieux,
+.presentation--experience--lieux-infos
+  width: 50%
+  margin: 20px 0
+  padding: 20px
+
+  @media (max-width: 800px)
+    width: 100%
+
+
+
+.presentation--experience--diplomes,
+.presentation--experience--lieux
+  background-color: #f8faf7
+  border-radius: 15px
+
+  @media (max-width: 800px)
+    order: 1
+
+.presentation--experience--infos
+  @media (max-width: 800px)
+    order: 2
+
+
+.presentation--experience--lieux
+  @media (max-width: 800px)
+    order: 3
+
+.presentation--experience--lieux-infos
+  @media (max-width: 800px)
+    order: 4
+

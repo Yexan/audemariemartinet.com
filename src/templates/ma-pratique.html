@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  @@include('./partials/head.tpl.html', {
+  "meta_title": "Aude-Marie Martinet",
+  "meta_desc": "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes âgées. Consultations à domicile"
+})
+</head>
+<body role="document">
+
+  @@include('./components/menu.tpl.html', {"activePage": "pratique"})
+
+  <section class="page-content">
+    <div class="ma-pratique--tabs">
+      <div target-choice="pourquoi-consulter" class="ma-pratique--tab active">
+        Pourquoi consulter ?
+      </div>
+      <div target-choice="psychotherapie" class="ma-pratique--tab">
+        Psychothérapie
+      </div>
+      <div target-choice="hypnose" class="ma-pratique--tab">
+        Hypnose
+      </div>
+    </div>
+
+    <div class="ma-pratique--tabs-content">
+      <div target-content="pourquoi-consulter" class="ma-pratique--tab-content active">
+        @@include('./partials/tabs/pourquoi-consulter.tpl.html')
+      </div>
+
+      <div target-content="psychotherapie" class="ma-pratique--tab-content">
+        @@include('./partials/tabs/psychotherapie.tpl.html')
+      </div>
+
+      <div target-content="hypnose" class="ma-pratique--tab-content">
+        @@include('./partials/tabs/hypnose.tpl.html')
+      </div>
+    </div>
+  </section>
+
+  @@include('./components/footer.tpl.html')
+
+  <script src="js/main.js"></script>
+</body>
+</html>

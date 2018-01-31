@@ -1,0 +1,15 @@
+@import ./utilities
+
+=page-title
+  position: relative
+  padding: 10px
+  font-size: 24px
+  text-align: center
+
+  &:after
+    position: absolute
+    content: ''
+    +bottom-left(0, "calc(50% - 30px)")
+    +w-h(60px, 3px)
+    background: #4CA2A9
+

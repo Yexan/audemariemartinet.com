@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  @@include('./partials/head.tpl.html', {
+  "meta_title": "Aude-Marie Martinet",
+  "meta_desc": "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes âgées. Consultations à domicile"
+})
+</head>
+<body role="document">
+
+  @@include('./components/menu.tpl.html', {"activePage": "presentation"})
+
+  <section class="page-content">
+
+    <div class="presentation--tabs">
+      <div target-choice="formation-experience" class="presentation--tab active">
+        Formation - Expériences
+      </div>
+      <div target-choice="approche" class="presentation--tab">
+        Approche clinique
+      </div>
+    </div>
+
+    <div class="presentation--tabs-content">
+      <div target-content="formation-experience" class="presentation--tab-content active">
+        @@include('./partials/tabs/formations-experiences.tpl.html')
+      </div>
+
+      <div target-content="approche" class="presentation--tab-content">
+        @@include('./partials/tabs/approche-clinique.tpl.html')
+      </div>
+    </div>
+  </section>
+
+  @@include('./components/footer.tpl.html')
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

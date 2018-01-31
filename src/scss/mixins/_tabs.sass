@@ -1,0 +1,26 @@
+@import ./utilities
+
+
+=tabs
+  +flex-row-center
+  flex-wrap: wrap
+  margin-bottom: 40px
+
+
+=tab
+  padding: 15px 20px
+  +color-and-hover(#cfe1e6, #4ca2a9)
+  cursor: pointer
+  border-bottom: 2px solid currentColor
+  transition: all .3s ease-in-out
+
+  &.active
+    color: #4ca2a9
+    font-weight: 700
+
+
+=tab-content
+  display: none
+
+  &.active
+    display: block

@@ -1,2 +1,38 @@
 @import ../mixins/utilities
+@import ../mixins/commons
+
+
+.home--content
+  +wrapper
+  padding: 60px 30px
+
+  @media (max-width: 470px)
+    padding: 40px 20px
+
+
+.home--featured-infos
+  +flex-row-left
+
+  @media (max-width: 700px)
+    +flex-column-center
+
+
+.home--image
+  width: 250px
+  margin-right: 40px
+
+  @media (max-width: 860px)
+    width: 180px
+
+  @media (max-width: 700px)
+    width: 180px
+    margin-right: 0
+    margin-bottom: 10px
+
+
+.home--info
+  margin: 20px 0
+
+  @media (max-width: 470px)
+    font-size: 14px
 

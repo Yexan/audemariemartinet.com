@@ -1,0 +1,107 @@
+@import ../mixins/utilities
+
+.navigation
+  +flex-row-center
+  background-color: #f8faf7
+  box-shadow: 0 2px 2px 0 rgba(#cfe1e6, .3)
+
+.navigation--logo
+  +w-h(85px)
+  margin-right: 40px
+
+  @media (max-width: 785px)
+    margin-right: 20px
+
+  @media (max-width: 690px)
+    display: none
+
+
+.navigation--wrapper
+  +flex-column-left
+
+  @media (max-width: 690px)
+    +flex-column-center
+    width: 100%
+
+
+.navigation--title
+  margin: 5px 0 0
+  font-size: 24px
+
+  @media (max-width: 785px)
+    font-size: 20px
+
+  @media (max-width: 690px)
+    margin: 15px 0 0
+    line-height: 1.1
+    text-align: center
+
+  @media (max-width: 400px)
+    font-size: 18px
+
+  span
+    color: #612D6B
+    font-size: 18px
+    opacity: .6
+
+    @media (max-width: 785px)
+      font-size: 14px
+
+    @media (max-width: 690px)
+      font-size: 12px
+
+    @media (max-width: 400px)
+      font-size: 11px
+
+
+.navigation--elements
+  +flex-row-left
+  flex-wrap: wrap
+  padding: 0
+  margin: 0
+  list-style: none
+
+  @media (max-width: 690px)
+    +flex-row-center
+
+  @media (max-width: 600px)
+    +wrapper(400px)
+
+
+.navigation--element
+  margin: 0 10px
+
+  @media (max-width: 690px)
+    margin: 10px 8px 5px
+
+  @media (max-width: 400px)
+    margin: 10px 6px 5px
+
+  &:first-of-type
+    margin-left: 0
+
+.navigation--link
+  padding: 5px 0px 12px
+  +color-and-hover(#cfe1e6, #4ca2a9)
+  font-size: 16px
+  font-weight: 700
+  transition: color .3s ease-in-out
+
+  @media (max-width: 785px)
+    padding: 5px 0px 14px
+    font-size: 14px
+
+  @media (max-width: 690px)
+    padding: 5px 0 9px
+
+  @media (max-width: 400px)
+    font-size: 13px
+
+  @media (max-width: 340px)
+    font-size: 12px
+
+
+  &.active
+    color: #4ca2a9
+    border-bottom: 2px solid currentColor
+
