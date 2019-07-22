@@ -13,9 +13,21 @@ var gulp          = require('gulp'),
     fileinclude   = require('gulp-file-include'),
     runSequence   = require('run-sequence');
 
+var srcFiles = {
+  js: 'src/js/**/*.js',
+  css: 'src/scss/**/*.{scss,sass}',
+  templates: 'src/templates/**/*.html'
+};
+
+var destFolder = {
+  js: 'www/js',
+  css: 'www/css/',
+  templates: 'www/'
+}
+
 
 gulp.task('styles', function() {
-  return sass('src/scss/**/*.{scss,sass}', { style: 'expanded' })
+  return sass(srcFiles.css, { style: 'expanded' })
     .pipe($.changed('styles', {
       extension: '.{scss,sass}'
     }))
@@ -24,17 +36,17 @@ gulp.task('styles', function() {
     })
     .on('error', console.error.bind(console))
     )
-    .pipe(gulp.dest('www/css/'))
-    .pipe(gulp.dest('www/css/'))
+    .pipe(gulp.dest(destFolder.css))
+    .pipe(gulp.dest(destFolder.css))
     .pipe(mmq({log: true }))
     .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
+      browsers: ['last 2 versions'],
       cascade: false
     }))
     .pipe($.if( '*.css', $.csso() ))
     .pipe($.rename('styles.min.css'))
-    .pipe(gulp.dest('www/css/'))
-    .pipe(gulp.dest('www/css/'))
+    .pipe(gulp.dest(destFolder.css))
+    .pipe(gulp.dest(destFolder.css))
     .pipe($.size({
       title: 'styles'
     })
@@ -44,22 +56,22 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src(srcFiles.js)
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('www/js'))
+    .pipe(gulp.dest(destFolder.js))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('www/js'));
+    .pipe(gulp.dest(destFolder.js));
 });
 
 //Include Templates
 gulp.task('fileinclude', function() {
   console.log('logged fileinclude start');
-  return gulp.src('src/templates/*.html')
+  return gulp.src(srcFiles.templates)
     .pipe(fileinclude())
-    .pipe(gulp.dest('www/'));
+    .pipe(gulp.dest(destFolder.templates));
 });
 
 // Clean
@@ -71,14 +83,13 @@ gulp.task('clean', function(cb) {
 gulp.task('watch', function() {
 
   // Watch templates
-  gulp.watch('src/templates/*.html', ['fileinclude']);
-  gulp.watch('src/templates/partials/*.tpl.html', ['fileinclude']);
+  gulp.watch(srcFiles.templates, ['fileinclude']);
 
   // Watch .scss files
-  gulp.watch('src/scss/**/*.{scss,sass}', ['styles']);
+  gulp.watch(srcFiles.css, ['styles']);
 
   // Watch .js files
-  gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch(srcFiles.js, ['scripts']);
 
 });
 
