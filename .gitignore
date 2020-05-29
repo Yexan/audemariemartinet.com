@@ -44,7 +44,3 @@ sftp-config.json
 
 # Sass cache
 .sass-cache
-
-#generated files
-www/css
-www/js
