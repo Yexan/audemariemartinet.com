@@ -93,6 +93,7 @@ gulp.task('watch', function() {
 
 });
 
+gulp.task('build', ['clean', 'styles', 'scripts'], function() {});
 
 gulp.task('default', ['clean', 'styles', 'scripts', 'watch'], function() {
 
