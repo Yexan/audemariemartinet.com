@@ -4,7 +4,7 @@
   "description": "Site de Aude Marie Martinet - Psychologue hypnothérapeute",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build"
   },
   "author": "Adrien Martinet",
   "license": "ISC",
