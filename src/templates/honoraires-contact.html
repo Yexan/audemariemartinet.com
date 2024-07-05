@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr" itemscope itemtype="http://schema.org/WebPage">
-<head>
-  @@include('./partials/head.tpl.html', {
-  "meta_title": "Aude-Marie Martinet",
-  "meta_desc": "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes âgées. Consultations à domicile"
-})
-</head>
-<body role="document">
+  <head>
+    @@include('./partials/head.tpl.html', { "meta_title": "Aude-Marie Martinet", "meta_desc":
+    "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes
+    âgées. Consultations à domicile" })
+  </head>
+  <body role="document">
+    @@include('./components/menu.tpl.html', {"activePage": "honoraires-contact"})
 
-  @@include('./components/menu.tpl.html', {"activePage": "honoraires-contact"})
+    <section class="page-content">
+      <h2>À mon cabinet</h2>
 
-  <section class="page-content">
+      <p>
+        La consultation dure <strong>45 minutes</strong>, son tarif de <strong>60€</strong> sera à
+        régler à chaque fin de séance, en espèces ou par chèque selon votre choix.<br />
+      </p>
 
-    <h2>À mon cabinet</h2>
+      <p>
+        Les consultations des psychologues en libéral ne sont pas pris en charge par la sécurité
+        sociale.
+      </p>
 
-    <p>
-      La consultation dure <strong>45 minutes</strong>, son tarif de <strong>55€</strong> sera à régler à chaque fin de séance, en espèces ou par chèque selon votre choix.<br>
-    </p>
+      <p>
+        Toutefois, il y a de plus en plus de mutuelles qui remboursent en partie les consultations,
+        souvent avec un seuil fixé par votre contrat. Pour cela, vous pourrez vous renseigner auprès
+        de votre organisme complémentaire.
+      </p>
+      <p>Une facture vous sera délivrée si besoin.</p>
 
-    <p>
-      Les consultations des psychologues en libéral ne sont pas pris en charge par la sécurité sociale.
-    </p>
+      <h2>À domicile</h2>
 
-    <p>
-      Toutefois, il y a de plus en plus de mutuelles qui remboursent en partie les consultations, souvent avec un seuil fixé par votre contrat. Pour cela, vous pourrez vous renseigner auprès de votre organisme complémentaire.
-    </p>
-    <p>
-      Une facture vous sera délivrée si besoin.
-    </p>
+      <p>
+        Pour connaitre les tarifs vous pouvez vous référer à la carte si dessous en fonction de
+        votre localisation en cliquant sur une zone.<br />
+      </p>
 
+      <div class="contact--map--wrapper">
+        <iframe
+          class="contact--map"
+          src="https://www.google.fr/maps/d/embed?mid=1Pc9T0qlwIx81Lqarm9fPvkRDyoaqU84N"
+          width="640"
+          height="480"
+        ></iframe>
+      </div>
 
-    <h2>À domicile</h2>
+      <p>
+        Si toutefois vous n'êtes pas situé dans ma zone de déplacement, n'hésitez pas à me
+        contacter.
+      </p>
 
-    <p>
-      Pour connaitre les tarifs vous pouvez vous référer à la carte si dessous en fonction de votre localisation en cliquant sur une zone.<br>
-    </p>
+      <p>
+        <strong
+          >Concernant la tarification pour les séances en médiation animale de groupe /
+          individuelles il vous suffit de m'envoyer votre demande par email afin que je puisse vous
+          établir un devis.</strong
+        >
+      </p>
+    </section>
 
-     <div class="contact--map--wrapper">
-      <iframe class="contact--map" src="https://www.google.fr/maps/d/embed?mid=1Pc9T0qlwIx81Lqarm9fPvkRDyoaqU84N" width="640" height="480"></iframe>
-    </div>
-
-    <p>
-      Si toutefois vous n'êtes pas situé dans ma zone de déplacement, n'hésitez pas à me contacter.
-    </p>
-
-    <p>
-      <strong>Concernant la tarification pour les séances en médiation animale de groupe / individuelles il vous suffit de m'envoyer votre demande par email afin que je puisse vous établir un devis.</strong>
-    </p>
-  </section>
-
-  @@include('./components/footer.tpl.html')
-
-</body>
+    @@include('./components/footer.tpl.html')
+  </body>
 </html>
