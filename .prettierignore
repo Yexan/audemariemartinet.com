@@ -1,0 +1,4 @@
+# Ignore templates to prevent formatting of @@include JSON
+src/templates/**/*.html
+www/**/*.html
+
