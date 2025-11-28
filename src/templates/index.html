@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr" itemscope itemtype="http://schema.org/WebPage">
-<head>
-  @@include('./partials/head.tpl.html', {
-  "meta_title": "Aude-Marie Martinet",
-  "meta_desc": "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes âgées. Consultations à domicile"
-})
-</head>
-<body role="document">
+  <head>
+    @@include('./partials/head.tpl.html', { "meta_title": "Aude-Marie Martinet", "meta_desc":
+    "Aude-Marie Martinet, psychologue hypnothérapeute, spécialiste en gérontologie - personnes
+    âgées. Consultations à domicile" })
+  </head>
+  <body role="document">
+    @@include('./components/menu.tpl.html', {"activePage": "home"})
 
-  @@include('./components/menu.tpl.html', {"activePage": "home"})
-
-
-  <section class="page-content">
-    <div class="home--featured-infos">
-      <div>
-        <p class="home--info">
-          Je suis <strong>psychologue clinicienne, psychothérapeute</strong> diplômée d'État de l'Université Lyon II.<br>
-          Après l'obtention de mon titre de Psychologue, j'ai souhaité compléter ma formation par un DU d'<strong>Hypnothérapie</strong> à Dijon (encadré par A.Bioy).
-        </p>
-        <p class="home--info">
-          Mon cabinet de psychothérapie est situé à la <strong>Maison de Santé de Sombernon</strong> (21540 - 2 rue des abeilles), ouvert 4 demi-journées par semaine.<br>
-          Cependant pour répondre à certaines demandes thérapeutiques je vous propose de me déplacer <strong>chez vous dans le secteur de la Vallée de l'Ouche</strong> (axe A38 : Civry en Montagne - Sombernon - Sainte Marie sur Ouche - Pont de Pany - Velars sur Ouche - Dijon et son agglomération).
-        </p>
-        <p class="home--info">
-          En parallèle, j'exerce en milieu Institutionnel au sein de deux EHPAD à Dijon.
-        </p>
+    <section class="page-content">
+      <div class="home--featured-infos">
+        <div>
+          <p class="home--info">
+            Je suis <strong>psychologue clinicienne, psychothérapeute</strong> diplômée d'État de
+            l'Université Lyon II.<br />
+            Après l'obtention de mon titre de Psychologue, j'ai souhaité compléter ma formation par
+            un DU d'<strong>Hypnothérapie</strong> à Dijon (encadré par A.Bioy).
+          </p>
+          <p class="home--info">
+            Mon cabinet de psychothérapie est situé à la
+            <strong>Maison de Santé de Sombernon</strong> au 2 rue des abeilles. Présente sur
+            rendez-vous uniquement, les mercredis en journée complète.<br />
+            Cependant pour répondre à certaines demandes thérapeutiques je vous propose de me
+            déplacer <strong>chez vous dans le secteur de la Vallée de l'Ouche</strong> (axe A38 :
+            Civry en Montagne - Sombernon - Sainte Marie sur Ouche - Pont de Pany - Velars sur Ouche
+            - Dijon et son agglomération).
+          </p>
+          <p class="home--info">
+            En parallèle, j'exerce en milieu Institutionnel au sein d'un EHPAD et au CHU de Dijon.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  @@include('./components/footer.tpl.html')
-
-</body>
+    @@include('./components/footer.tpl.html')
+  </body>
 </html>
