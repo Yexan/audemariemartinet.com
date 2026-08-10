@@ -41,7 +41,7 @@
     "jshint-stylish": "^2.0.1",
     "node-bourbon": "^4.2.3",
     "run-sequence": "^1.1.4",
-    "tiny-lr": "^0.2.1",
+    "tiny-lr": "^2.0.0",
     "gulp-file-include": "2.0.1"
   }
 }
